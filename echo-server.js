@@ -10,6 +10,8 @@ function newConnection(socket) {
         console.log('EOF');
     });
 
+    
+
     socket.on('data', (data) => {
         console.log('data: ', data);
         socket.write(data); // Echo back the data
@@ -28,3 +30,13 @@ server.on('connection', newConnection);
 server.listen({ host: '127.0.0.1', port: 1234 });
 
 console.log("Server listening on 127.0.0.1:1234");
+
+// function do_something_promise(): Promise<T>;
+
+// async function my_app(){
+// 	try{
+// 		cont result: T = await do_something_promise();
+// 	}catch(err){
+// 		//fail
+// 	}
+// }
